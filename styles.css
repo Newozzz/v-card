@@ -3,13 +3,11 @@ body {
     margin: 0;
     background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(3, 45, 70));
     background: radial-gradient(rgb(255, 255, 255), rgb(3, 45, 70));
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: ;
+    padding-top: 10%;
     font-weight: bold;
-    height: 100vh;
 }
 
 .v-card {
@@ -21,6 +19,16 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px black;
     background-color: whitesmoke;
+    opacity: 0;
+    
+    animation: fondu 2s forwards;
+   
+}
+
+@keyframes fondu {
+    to {
+        opacity: 1;
+    }
 }
 
 .gauche {
@@ -29,7 +37,13 @@ body {
 
 .droite {
     text-align: center;
+    opacity: 0;
+    animation: fondu 2s forwards;
+    text-shadow:0 0 5px black
+
 }
+
+
 
 .v-card img {
     width: 150px;
@@ -37,43 +51,24 @@ body {
     border-radius: 50%;
     border: 5px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px ;
 }
 
-.v-card h1 {
-    margin: 10px;
-    color: #3498db;
-    font-size: 28px;
-}
 
-.metier {
-    margin: 25px;
-    color: #555;
-    font-weight: bold;
-}
-
-.contact {
-    margin: 5px;
-    color: #555;
-}
-
-.loc {
-    margin: 5px;
-    color: #555;
-    font-style: italic;
-}
-
-.RS {
-    margin-top: 20px;
-
+.v-card img:hover {
+    transform: scale(1.2);
 }
 
 .RS img {
-    width: 40px;
-    height: 40px;
-    border-radius: 30%;
-    transition: transform 0.3s ease-in-out;
+    width: 45px;
+    height: 50px;
+    margin: 8px;
+    box-shadow: 0 0 10px;
+    
+}
+.v-card img:hover {
+    transform: scale(1.2);
 }
 
-.RS img:hover {
-    transform: scale(1, 2);
-}
+
